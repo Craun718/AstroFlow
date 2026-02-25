@@ -10,9 +10,13 @@
 ## 🖼️ 预览
 
 ### 网站截图
-<img alt="AstroFlow 网站预览" src="./public/AstroFlow - Astrojs Logistics & Manufacturing Website Template.png" />
+
+<img alt="" src="./public/AstroFlow - Astrojs Logistics & Manufacturing Website Template.png" />
+
+![AstroFlow 网站预览]()
 
 ### 性能与速度
+
 <img alt="性能指标" src="./public/speed-metrics.png" />
 
 ## ✨ 特性
@@ -44,22 +48,25 @@
 ### 安装
 
 1. 克隆此仓库：
+
 ```bash
 git clone https://github.com/yourusername/astroflow.git
 cd astroflow
 ```
 
-2. 安装依赖：
+1. 安装依赖：
+
 ```bash
 npm install
 ```
 
-3. 启动开发服务器：
+1. 启动开发服务器：
+
 ```bash
 npm run dev
 ```
 
-4. 在浏览器中打开 [http://localhost:4321](http://localhost:4321)
+1. 在浏览器中打开 [http://localhost:4321](http://localhost:4321)
 
 ## 📝 配置
 
@@ -95,6 +102,7 @@ RFQ 表单 (`src/components/react/RFQForm.tsx`) 目前将表单数据记录到�
    - 更新表单提交处理程序
 
 使用 Formspree 的示例：
+
 ```typescript
 const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
@@ -114,17 +122,17 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
 ## 🛠️ 可用脚本
 
-| 命令                | 操作                                           |
+| 命令 | 操作 |
 | :--------------------- | :----------------------------------------------- |
-| `npm install`          | 安装依赖                            |
-| `npm run dev`          | 启动本地开发服务器 `localhost:4321`     |
-| `npm run build`        | 构建生产版本到 `./dist/`         |
-| `npm run preview`      | 本地预览构建版本，部署前检查     |
-| `npm run astro ...`    | 运行 CLI 命令如 `astro add`, `astro check` |
+| `npm install` | 安装依赖 |
+| `npm run dev` | 启动本地开发服务器 `localhost:4321` |
+| `npm run build` | 构建生产版本到 `./dist/` |
+| `npm run preview` | 本地预览构建版本，部署前检查 |
+| `npm run astro ...` | 运行 CLI 命令如 `astro add`, `astro check` |
 
 ## 📁 项目结构
 
-```
+```bash
 /
 ├── public/
 │   └── favicon.svg
@@ -182,6 +190,7 @@ npm run build
 ### 其他平台
 
 `dist/` 文件夹可以部署到任何静态托管服务：
+
 - GitHub Pages
 - Cloudflare Pages
 - AWS S3 + CloudFront
@@ -190,7 +199,6 @@ npm run build
 ## 📄 许可证
 
 本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件。
-
 
 ## 🤝 贡献
 
