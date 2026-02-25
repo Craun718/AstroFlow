@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Warehouse, Truck, Package, BarChart3, Shield, Headphones } from 'lucide-react';
+import { Warehouse, Truck, Package, BarChart3, Shield, Headphones, Globe, Map, Database, FileText, Activity, Layers } from 'lucide-react';
 
 import warehouseImg from '@assets/photo-1553413077-190dd305871c.jpg';
 import truckImg from '@assets/photo-1601584115197-04ecc0da31d7.jpg';
@@ -10,39 +10,39 @@ import headphonesImg from '@assets/photo-1486312338219-ce68d2c6f44d.jpg';
 
 const features = [
   {
-    icon: Warehouse,
-    title: 'Advanced Warehousing',
-    description: 'Climate-controlled facilities with automated inventory systems and 24/7 security.',
+    icon: Globe,
+    title: '实景三维智能可视化',
+    description: '构建地形级与城市级三维模型，打造地理信息数据底座。',
     image: warehouseImg,
   },
   {
-    icon: Truck,
-    title: 'Fast Transportation',
-    description: 'Multi-modal logistics network ensuring rapid delivery across all destinations.',
+    icon: Activity,
+    title: '遥感智能监测',
+    description: '基于卫星影像与AI技术，实现自然资源变化自动检测。',
     image: truckImg,
   },
   {
-    icon: Package,
-    title: 'Quality Manufacturing',
-    description: 'ISO-certified production with precision engineering and quality control.',
+    icon: Layers,
+    title: '数据生产平台',
+    description: '高效处理原始影像，快速生产高精度遥感数据产品。',
     image: packageImg,
   },
   {
-    icon: BarChart3,
-    title: 'Real-Time Analytics',
-    description: 'Complete supply chain visibility with advanced tracking and reporting.',
+    icon: FileText,
+    title: '自然资源确权',
+    description: '提供房地一体与自然资源统一确权登记全流程解决方案。',
     image: barChart3Img,
   },
   {
-    icon: Shield,
-    title: 'Secure Operations',
-    description: 'Industry-leading security protocols protecting your valuable assets.',
+    icon: Map,
+    title: '国土空间规划',
+    description: '构建国土空间规划一张图，辅助科学决策与实施监督。',
     image: shieldImg,
   },
   {
-    icon: Headphones,
-    title: '24/7 Support',
-    description: 'Dedicated teams available around the clock to ensure seamless operations.',
+    icon: Database,
+    title: '智慧应用服务',
+    description: '服务于应急、环保、交通等多个行业的智慧化应用。',
     image: headphonesImg,
   },
 ];

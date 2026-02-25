@@ -14,7 +14,7 @@ export default function RFQForm() {
     console.log('Form submitted:', data);
     
     // Show success message
-    alert('Thank you for your request! We will contact you within 24 hours.');
+    alert('感谢您的咨询！我们将在24小时内与您联系。');
     form.reset();
   };
 
@@ -27,7 +27,7 @@ export default function RFQForm() {
             <User className="w-5 h-5 text-white" />
           </div>
           <h2 className="text-2xl font-bold text-gray-900">
-            Contact Information
+            联系信息
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -36,7 +36,7 @@ export default function RFQForm() {
               htmlFor="firstName"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              First Name <span className="text-red-500">*</span>
+              姓 <span className="text-red-500">*</span>
             </Label.Root>
             <input
               type="text"
@@ -51,7 +51,7 @@ export default function RFQForm() {
               htmlFor="lastName"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              Last Name <span className="text-red-500">*</span>
+              名 <span className="text-red-500">*</span>
             </Label.Root>
             <input
               type="text"
@@ -66,7 +66,7 @@ export default function RFQForm() {
               htmlFor="email"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              Email Address <span className="text-red-500">*</span>
+              电子邮箱 <span className="text-red-500">*</span>
             </Label.Root>
             <input
               type="email"
@@ -81,7 +81,7 @@ export default function RFQForm() {
               htmlFor="phone"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              Phone Number <span className="text-red-500">*</span>
+              电话号码 <span className="text-red-500">*</span>
             </Label.Root>
             <input
               type="tel"
@@ -101,7 +101,7 @@ export default function RFQForm() {
             <Building2 className="w-5 h-5 text-white" />
           </div>
           <h2 className="text-2xl font-bold text-gray-900">
-            Company Information
+            公司信息
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -110,7 +110,7 @@ export default function RFQForm() {
               htmlFor="company"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              Company Name <span className="text-red-500">*</span>
+              公司名称 <span className="text-red-500">*</span>
             </Label.Root>
             <input
               type="text"
@@ -125,7 +125,7 @@ export default function RFQForm() {
               htmlFor="industry"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              Industry <span className="text-red-500">*</span>
+              所属行业 <span className="text-red-500">*</span>
             </Label.Root>
             <select
               id="industry"
@@ -133,14 +133,14 @@ export default function RFQForm() {
               required
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition"
             >
-              <option value="">Select an industry</option>
-              <option value="ecommerce">E-Commerce & Retail</option>
-              <option value="healthcare">Healthcare & Pharmaceuticals</option>
-              <option value="automotive">Automotive & Manufacturing</option>
-              <option value="technology">Technology & Electronics</option>
-              <option value="consumer-goods">Consumer Goods</option>
-              <option value="food-beverage">Food & Beverage</option>
-              <option value="other">Other</option>
+              <option value="">选择行业</option>
+              <option value="ecommerce">自然资源管理</option>
+              <option value="healthcare">国土空间规划</option>
+              <option value="automotive">矿山生态修复</option>
+              <option value="technology">应急管理与防灾</option>
+              <option value="consumer-goods">农村确权登记</option>
+              <option value="food-beverage">生态环境保护</option>
+              <option value="other">其他</option>
             </select>
           </div>
         </div>
@@ -153,22 +153,22 @@ export default function RFQForm() {
             <Briefcase className="w-5 h-5 text-white" />
           </div>
           <h2 className="text-2xl font-bold text-gray-900">
-            Service Requirements
+            服务需求
           </h2>
         </div>
         <div className="space-y-6">
           <div>
             <Label.Root className="block text-sm font-medium text-gray-700 mb-3">
-              Services Needed <span className="text-red-500">*</span>
+              所需服务 <span className="text-red-500">*</span>
             </Label.Root>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
-                { id: 'warehousing', label: 'Warehousing & Storage', icon: Warehouse },
-                { id: 'manufacturing', label: 'Manufacturing Services', icon: Factory },
-                { id: 'transportation', label: 'Transportation & Distribution', icon: Truck },
-                { id: 'supply-chain', label: 'Supply Chain Management', icon: Network },
-                { id: 'value-added', label: 'Value-Added Services', icon: Wrench },
-                { id: 'technology', label: 'Technology Integration', icon: Cpu },
+                { id: 'warehousing', label: '遥感影像数据处理', icon: Warehouse },
+                { id: 'manufacturing', label: '实景三维建设', icon: Factory },
+                { id: 'transportation', label: 'AI智能监测', icon: Truck },
+                { id: 'supply-chain', label: '自然资源确权', icon: Network },
+                { id: 'value-added', label: '国土空间规划', icon: Wrench },
+                { id: 'technology', label: '智慧应用开发', icon: Cpu },
               ].map((service) => {
                 const IconComponent = service.icon;
                 return (
@@ -208,7 +208,7 @@ export default function RFQForm() {
                 className="flex items-center text-sm font-medium text-gray-700 mb-2"
               >
                 <Calendar className="w-4 h-4 mr-2 text-gray-500" />
-                Timeline <span className="text-red-500 ml-1">*</span>
+                项目周期 <span className="text-red-500 ml-1">*</span>
               </Label.Root>
               <div className="relative">
                 <select
@@ -217,12 +217,12 @@ export default function RFQForm() {
                   required
                   className="w-full px-4 py-2 pl-10 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition appearance-none bg-white"
                 >
-                  <option value="">Select timeline</option>
-                  <option value="immediate">Immediate (Within 1 month)</option>
-                  <option value="1-3-months">1-3 months</option>
-                  <option value="3-6-months">3-6 months</option>
-                  <option value="6-plus-months">6+ months</option>
-                  <option value="flexible">Flexible</option>
+                  <option value="">选择周期</option>
+                  <option value="immediate">立即 (1个月内)</option>
+                  <option value="1-3-months">1-3 个月</option>
+                  <option value="3-6-months">3-6 个月</option>
+                  <option value="6-plus-months">6个月以上</option>
+                  <option value="flexible">灵活</option>
                 </select>
                 <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
               </div>
@@ -233,14 +233,14 @@ export default function RFQForm() {
                 className="flex items-center text-sm font-medium text-gray-700 mb-2"
               >
                 <Package className="w-4 h-4 mr-2 text-gray-500" />
-                Estimated Monthly Volume
+                预估数据量/项目规模
               </Label.Root>
               <div className="relative">
                 <input
                   type="text"
                   id="volume"
                   name="volume"
-                  placeholder="e.g., 10,000 units"
+                  placeholder="例如：100平方公里 / 5000户"
                   className="w-full px-4 py-2 pl-10 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
                 />
                 <Package className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
@@ -253,14 +253,14 @@ export default function RFQForm() {
               htmlFor="details"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              Project Details <span className="text-red-500">*</span>
+              项目详情 <span className="text-red-500">*</span>
             </Label.Root>
             <textarea
               id="details"
               name="details"
               rows={6}
               required
-              placeholder="Please provide details about your requirements, including product specifications, storage needs, shipping destinations, or any other relevant information..."
+              placeholder="请详细描述您的需求，包括数据精度要求、覆盖范围、交付时间或其他相关信息..."
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition resize-none"
             />
           </div>
@@ -273,14 +273,13 @@ export default function RFQForm() {
           type="submit"
           className="w-full bg-linear-to-r from-blue-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:from-blue-700 hover:to-teal-700 transition-all duration-200 hover:shadow-xl active:scale-95 flex items-center justify-center space-x-2"
         >
-          <span>Submit Request</span>
+          <span>提交咨询</span>
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
           </svg>
         </button>
         <p className="text-sm text-gray-500 text-center mt-4">
-          By submitting this form, you agree to our Privacy Policy and Terms of
-          Service.
+          提交表单即表示您同意我们的隐私政策和服务条款。
         </p>
       </div>
     </form>

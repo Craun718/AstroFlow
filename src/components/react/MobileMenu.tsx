@@ -16,8 +16,8 @@ export default function MobileMenu() {
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-black/50 z-50 lg:hidden" />
         <Dialog.Content className="fixed top-0 left-0 right-0 bg-white border-b border-slate-200 z-50 lg:hidden max-h-[85vh] overflow-y-auto">
-          <Dialog.Title className="sr-only">Navigation Menu</Dialog.Title>
-          <Dialog.Description className="sr-only">Main navigation menu</Dialog.Description>
+          <Dialog.Title className="sr-only">导航菜单</Dialog.Title>
+          <Dialog.Description className="sr-only">主导航菜单</Dialog.Description>
           <div className="container mx-auto px-4 py-6 space-y-2">
             {NAVIGATION.map((item) => (
               <Dialog.Close asChild key={item.href}>
@@ -35,7 +35,7 @@ export default function MobileMenu() {
                   href="/rfq"
                   className="block text-center px-6 py-3 text-sm font-semibold text-white bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-lg shadow-md transition-all"
                 >
-                  Request Quote
+                  联系我们
                 </a>
               </Dialog.Close>
             </div>
@@ -43,7 +43,7 @@ export default function MobileMenu() {
           <Dialog.Close asChild>
             <button
               className="absolute top-4 right-4 p-2 text-slate-700 hover:bg-slate-100 rounded-lg transition-colors"
-              aria-label="Close menu"
+              aria-label="关闭菜单"
             >
               <X className="h-6 w-6" />
             </button>

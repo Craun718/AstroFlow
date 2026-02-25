@@ -1,18 +1,18 @@
 // Site configuration
 export const SITE = {
-  title: 'AstroFlow',
-  description: 'Leading provider of optimized logistics and manufacturing solutions with state-of-the-art facilities and industry expertise.',
+  title: '广西遥感空间信息科技有限公司',
+  description: '专注于遥感影像数据生产、实景三维建设、自然资源监测与国土空间规划的高新技术企业。',
   url: 'https://yourdomain.com',
-  author: 'AstroFlow',
+  author: '广西遥感空间信息科技有限公司',
 } as const;
 
 export const NAVIGATION = [
-  { name: 'Home', href: '/' },
-  { name: 'Capabilities', href: '/capabilities' },
-  { name: 'Use Cases', href: '/use-cases' },
-  { name: 'Facilities', href: '/facilities' },
-  { name: 'Request Quote', href: '/rfq' },
-  { name: 'Documentation', href: '/documentation' },
+  { name: '首页', href: '/' },
+  { name: '核心能力', href: '/capabilities' },
+  { name: '应用案例', href: '/use-cases' },
+  { name: '关于我们', href: '/facilities' },
+  { name: '联系我们', href: '/rfq' },
+  { name: '文档中心', href: '/documentation' },
 ] as const;
 
 export const SOCIAL_LINKS = {

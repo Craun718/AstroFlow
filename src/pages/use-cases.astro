@@ -1,10 +1,9 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import Section from '@components/ui/Section.astro';
-import Button from '@components/ui/Button.astro';
-import TestimonialCard from '@components/ui/TestimonialCard.astro';
-import UseCaseTabs from '@components/react/UseCaseTabs';
-import StatsCards from '@components/react/StatsCards';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/ui/Section.astro';
+import Button from '../components/ui/Button.astro';
+import UseCaseTabs from '../components/react/UseCaseTabs';
+import StatsCards from '../components/react/StatsCards';
 import { Image } from 'astro:assets';
 
 import ecommerceImg from '@assets/photo-1607082349566-187342175e2f.jpg';
@@ -14,243 +13,197 @@ import technologyImg from '@assets/photo-1518770660439-4636190af475.jpg';
 import consumerGoodsImg from '@assets/photo-1558618666-fcd25c85cd64.jpg';
 import foodBeverageImg from '@assets/photo-1542838132-92c53300491e.jpg';
 
-import testimonial1Img from '@assets/photo-1494790108377-be9c29b29330.jpg';
-import testimonial2Img from '@assets/photo-1559839734-2b71ea197ec2.jpg';
-import testimonial3Img from '@assets/photo-1507003211169-0a1dd7228f2d.jpg';
-
 import heroBgImg from '@assets/photo-1551288049-bebda4e38f71.jpg';
 import ctaBgImg from '@assets/photo-1553413077-190dd305871c.jpg';
 
 const useCases:any[] = [
   {
-    industry: 'E-Commerce & Retail',
-    iconName: 'ShoppingCart',
+    industry: '自然资源管理',
+    iconName: 'Tree',
     image: ecommerceImg,
-    challenge: 'Managing high-volume orders during peak seasons with tight delivery windows and customer expectations for fast, accurate fulfillment.',
-    solution: 'Scalable warehousing with automated order processing, same-day shipping capabilities, and integrated returns management.',
+    challenge: '面对广阔的自然资源，传统人工巡查效率低、周期长，难以实时掌握耕地变化、违法用地等情况。',
+    solution: '建立自然资源遥感大数据智能监测平台，利用AI技术自动提取变化图斑，实现“天上看、地上查、网上管”。',
     results: [
-      '40% reduction in order processing time',
-      '99.5% order accuracy rate',
-      '2-day average delivery time',
-      '95% customer satisfaction score'
+      '监测效率提升80%以上',
+      '违法用地发现率大幅提高',
+      '实现全区常态化监测',
+      '大幅降低人工巡查成本'
     ]
   },
   {
-    industry: 'Healthcare & Pharmaceuticals',
-    iconName: 'Heart',
+    industry: '国土空间规划',
+    iconName: 'Map',
     image: healthcareImg,
-    challenge: 'Maintaining strict temperature controls, regulatory compliance, and chain of custody for sensitive medical products and pharmaceuticals.',
-    solution: 'FDA-compliant climate-controlled facilities with validated cold chain logistics, real-time monitoring, and full audit trails.',
+    challenge: '规划编制过程中数据来源多、标准不一，实施监督缺乏有效抓手，难以实现全生命周期管理。',
+    solution: '构建国土空间规划“一张图”实施监督信息系统，整合现状、规划、管理等各类数据，形成统一的空间底座。',
     results: [
-      '100% regulatory compliance',
-      'Zero temperature excursions',
-      'Complete lot traceability',
-      'Reduced waste by 30%'
+      '数据共享与协同效率提升',
+      '规划实施监督全流程覆盖',
+      '辅助科学决策能力增强',
+      '提升空间治理现代化水平'
     ]
   },
   {
-    industry: 'Automotive & Manufacturing',
-    iconName: 'Car',
+    industry: '矿山生态修复',
+    iconName: 'Mountain',
     image: automotiveImg,
-    challenge: 'Coordinating just-in-time delivery of components across multiple manufacturing plants while minimizing inventory holding costs.',
-    solution: 'Strategic distribution centers near production facilities, milk-run logistics, and predictive inventory management.',
+    challenge: '露天矿山分布广、监管难度大，越界开采、生态破坏等问题频发，传统监管手段滞后。',
+    solution: '利用实景三维与遥感监测技术，对矿山进行定期“体检”，自动识别越界开采与生态修复情况。',
     results: [
-      '50% reduction in inventory costs',
-      '99.8% on-time delivery',
-      'Zero production line stoppages',
-      'Improved cash flow'
+      '矿山监测覆盖率100%',
+      '违规行为及时发现',
+      '生态修复效果可视化评估',
+      '监管工作规范化、智能化'
     ]
   },
   {
-    industry: 'Technology & Electronics',
-    iconName: 'Laptop',
+    industry: '应急管理与防灾',
+    iconName: 'AlertTriangle',
     image: technologyImg,
-    challenge: 'Secure handling of high-value electronics, efficient reverse logistics for returns, and rapid product lifecycle management.',
-    solution: 'ESD-protected environments, secure chain of custody, streamlined returns processing, and asset recovery programs.',
+    challenge: '自然灾害突发性强，灾害风险底数不清，应急救援缺乏精准的地理信息支持。',
+    solution: '开展自然灾害综合风险普查，建立森林火灾风险监测系统，提供灾前预警、灾中指挥、灾后评估服务。',
     results: [
-      'Zero security incidents',
-      '48-hour return processing',
-      '85% asset recovery rate',
-      'Reduced shrinkage by 60%'
+      '风险隐患识别精准度高',
+      '火情监测响应时间缩短',
+      '应急指挥决策有据可依',
+      '保障人民生命财产安全'
     ]
   },
   {
-    industry: 'Consumer Goods',
-    iconName: 'Package',
+    industry: '农村确权登记',
+    iconName: 'Home',
     image: consumerGoodsImg,
-    challenge: 'Managing diverse product portfolios with varying shelf lives, promotional campaigns, and seasonal demand fluctuations.',
-    solution: 'Multi-client warehousing, FEFO inventory management, promotional labeling services, and demand-driven distribution.',
+    challenge: '农村房地一体确权工作量大、权属关系复杂，传统测绘方式效率低，数据建库困难。',
+    solution: '研发农村房地一体确权登记管理系统，采用无人机倾斜摄影辅助调查，实现内外业一体化作业。',
     results: [
-      '35% improvement in stock turnover',
-      'Reduced spoilage by 45%',
-      '3-day promo turnaround time',
-      'Flexible capacity scaling'
+      '确权登记效率大幅提升',
+      '权籍调查成本降低',
+      '数据成果质量可靠',
+      '有效化解历史遗留问题'
     ]
   },
   {
-    industry: 'Food & Beverage',
-    iconName: 'UtensilsCrossed',
+    industry: '生态环境保护',
+    iconName: 'Leaf',
     image: foodBeverageImg,
-    challenge: 'Maintaining food safety standards, managing perishables, and ensuring compliance with HACCP and FDA regulations.',
-    solution: 'FSMA-compliant facilities, temperature-zoned warehousing, lot tracking, and specialized refrigerated transport.',
+    challenge: '自然保护地人类活动频繁，生态环境破坏隐蔽性强，监管部门难以全天候监控。',
+    solution: '基于高分辨率遥感影像，对自然保护地进行动态监测，及时发现违规建设、采矿等破坏生态行为。',
     results: [
-      '100% food safety compliance',
-      '2% product loss rate',
-      'Full batch recall capability',
-      'Extended product freshness'
+      '实现保护地全覆盖监测',
+      '人类活动轨迹精准捕捉',
+      '生态红线监管更严密',
+      '守护绿水青山成效显著'
     ]
-  }
-];
-
-const testimonials:any[] = [
-  {
-    quote: "AstroFlow's automated warehousing solution transformed our e-commerce operations. We reduced order processing time by 40% and achieved 99.5% accuracy. Their same-day shipping capabilities helped us compete with industry giants.",
-    name: "Sarah Mitchell",
-    role: "VP Operations, TechRetail",
-    image: testimonial1Img,
-    ringColor: "ring-blue-200"
-  },
-  {
-    quote: "Their FDA-compliant cold chain logistics are exceptional. We've maintained 100% regulatory compliance with zero temperature excursions. The real-time monitoring and complete audit trails give us complete confidence.",
-    name: "Dr. James Chen",
-    role: "Director, PharmaLogistics",
-    image: testimonial2Img,
-    ringColor: "ring-teal-200"
-  },
-  {
-    quote: "Just-in-time delivery with 99.8% on-time performance and zero production stoppages. Their strategic distribution centers and predictive inventory management cut our inventory costs by 50%.",
-    name: "Robert Johnson",
-    role: "Operations Manager, AutoParts Co.",
-    image: testimonial3Img,
-    ringColor: "ring-blue-200"
   }
 ];
 ---
 
-<BaseLayout title="Use Cases - Industry Solutions">
-  <!-- Hero Section -->
-  <section class="relative h-[70vh] min-h-[500px] flex items-center overflow-hidden">
-    <!-- Background Image with Overlay -->
+<BaseLayout
+  title="应用案例 | 广西遥感空间信息科技有限公司"
+  description="探索我们如何利用遥感与空间信息技术，为自然资源、应急、环保等行业解决实际问题。"
+>
+  <!-- Hero -->
+  <section class="relative py-24 bg-slate-900 overflow-hidden">
     <div class="absolute inset-0">
       <Image 
         src={heroBgImg}
-        alt="Industry solutions and use cases"
-        class="w-full h-full object-cover"
+        alt="Industry solutions background"
+        class="w-full h-full object-cover opacity-30"
         width={2070}
         height={1380}
       />
-      <div class="absolute inset-0 bg-linear-to-r from-slate-900/95 via-slate-900/80 to-slate-900/50"></div>
+      <div class="absolute inset-0 bg-linear-to-b from-slate-900/50 to-slate-900"></div>
     </div>
-
-    <!-- Content -->
-    <div class="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-4xl mx-auto text-center">
-        <div class="inline-flex items-center px-4 py-2 mb-6 bg-linear-to-r from-blue-600 to-teal-600 text-white text-sm font-semibold rounded-full shadow-lg">
-          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
-          </svg>
-          Industry Solutions
-        </div>
-        
-        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-          Industry <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-teal-400 to-blue-400">
-            Use Cases
-          </span>
-        </h1>
-        
-        <p class="text-xl md:text-2xl text-slate-200 mb-8 max-w-3xl mx-auto leading-relaxed">
-          Real-world solutions delivering measurable results across diverse industries. 
-          See how we've transformed operations.
-        </p>
+    
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div class="inline-block px-4 py-2 mb-6 bg-teal-900/50 border border-teal-500/30 backdrop-blur-md text-teal-300 text-sm font-semibold rounded-full">
+        行业赋能 · 价值创造
       </div>
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+        多行业 <span class="text-transparent bg-clip-text bg-linear-to-r from-teal-400 to-blue-400">应用案例</span>
+      </h1>
+      <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+        深入行业痛点，提供定制化解决方案，助力各行各业实现数字化、智慧化转型。
+      </p>
     </div>
   </section>
 
-  <!-- Use Cases with Tabs -->
-  <Section background="gray">
-    <UseCaseTabs useCases={useCases} client:load />
-  </Section>
-
-  <!-- Success Metrics -->
-  <Section background="white">
+  <!-- Interactive Use Cases -->
+  <Section class="bg-white">
     <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-        Proven <span class="gradient-text">Results</span>
+      <h2 class="text-4xl font-bold text-slate-900 mb-6">
+        成功案例展示
       </h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Our track record speaks for itself with measurable improvements across key performance indicators.
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+        从自然资源管理到智慧城市建设，我们的技术正在各个领域发挥重要作用。
       </p>
     </div>
-
-    <StatsCards 
-      stats={[
-        { value: '99.8%', label: 'On-Time Delivery', iconName: 'CheckCircle2' },
-        { value: '45%', label: 'Average Cost Savings', iconName: 'TrendingDown' },
-        { value: '500+', label: 'Satisfied Clients', iconName: 'Users' },
-        { value: '50M+', label: 'Units Shipped', iconName: 'Package' }
-      ]}
-      client:load 
-    />
+    
+    <UseCaseTabs client:load useCases={useCases} />
   </Section>
 
-  <!-- Testimonials Section -->
-  <Section background="gray">
-    <div class="text-center mb-16">
-      <div class="inline-block px-4 py-2 mb-4 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full">
-        Client Success Stories
+  <!-- Impact Stats -->
+  <Section class="bg-slate-50">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-4xl font-bold text-slate-900 mb-6">
+          数据见证 <span class="text-blue-600">服务价值</span>
+        </h2>
+        <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+          我们不仅提供技术，更致力于为客户创造可衡量的价值。通过我们的服务，客户在效率提升、成本降低、风险防控等方面取得了显著成效。
+        </p>
+        <div class="space-y-4">
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900">显著的效率提升</h4>
+              <p class="text-sm text-slate-600">自动化技术替代传统人工作业</p>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900">精准的决策支持</h4>
+              <p class="text-sm text-slate-600">数据驱动的科学管理与决策</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-        Trusted by <span class="gradient-text">Industry Leaders</span>
-      </h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        See how we've helped companies across different industries transform their operations and achieve remarkable results.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {testimonials.map((testimonial) => (
-        <TestimonialCard testimonial={testimonial} />
-      ))}
+      <StatsCards client:visible />
     </div>
   </Section>
 
-  <!-- CTA Section -->
-  <section class="relative py-32 overflow-hidden">
-    <!-- Background Image -->
+  <!-- Testimonials - Removed -->
+  
+  <!-- CTA -->
+  <Section class="bg-blue-900 text-white relative overflow-hidden">
     <div class="absolute inset-0">
       <Image 
         src={ctaBgImg}
-        alt="Let's work together"
-        class="w-full h-full object-cover"
+        alt="CTA background"
+        class="w-full h-full object-cover opacity-20"
         width={2070}
         height={1380}
       />
-      <div class="absolute inset-0 bg-linear-to-r from-blue-900/95 to-teal-900/95"></div>
     </div>
-
-    <!-- Content -->
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="max-w-4xl mx-auto text-center text-white">
-        <div class="inline-block px-4 py-2 mb-6 bg-white/10 backdrop-blur-sm text-white text-sm font-semibold rounded-full">
-          Get Started Today
-        </div>
-        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-          Ready to Transform Your <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-teal-400">Operations</span>?
-        </h2>
-        <p class="text-xl md:text-2xl text-slate-200 mb-12 max-w-2xl mx-auto leading-relaxed">
-          Every industry has unique requirements. Let us create a customized solution for your business.
-        </p>
-        
-        <div class="flex flex-col sm:flex-row gap-6 justify-center">
-          <Button href="/rfq" size="lg" class="bg-blue-600! hover:bg-blue-700! text-white! shadow-2xl!">
-            Request a Quote
-          </Button>
-          <Button href="/capabilities" size="lg" variant="outline" class="border-2! border-white! text-white! hover:bg-white/10! shadow-2xl!">
-            View Capabilities
-          </Button>
-        </div>
-      </div>
+    <div class="relative z-10 text-center max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold mb-6">
+        拥有类似的项目需求？
+      </h2>
+      <p class="text-xl text-blue-100 mb-10">
+        联系我们的专家团队，获取定制化的解决方案建议。
+      </p>
+      <Button href="/rfq" size="lg" class="bg-white! text-blue-900! hover:bg-blue-50!">
+        立即咨询
+      </Button>
     </div>
-  </section>
+  </Section>
 </BaseLayout>
-

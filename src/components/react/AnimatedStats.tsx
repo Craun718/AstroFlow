@@ -8,10 +8,10 @@ interface Stat {
 }
 
 const stats: Stat[] = [
-  { value: '500', label: 'Global Clients', suffix: '+' },
-  { value: '50', label: 'Million Units Shipped', suffix: 'M+' },
-  { value: '99.9', label: 'On-Time Delivery', suffix: '%' },
-  { value: '15', label: 'Facilities Worldwide', suffix: '+' },
+  { value: '23.76', label: '地形三维数据', suffix: '万km²' },
+  { value: '400', label: '系统授权用户', suffix: '+' },
+  { value: '73', label: '矿山监测项目', suffix: '+' },
+  { value: '10', label: '行业应用领域', suffix: '+' },
 ];
 
 export default function AnimatedStats() {
