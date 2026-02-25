@@ -21,8 +21,8 @@ const facilities = [
     icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
     </svg>`,
-    phone: '0771-12345678',
-    email: 'contact@gxrsky.com',
+    phone: '0771-4836481',
+    email: 'gxygxxkj@163.com',
     manager: '业务部',
     hours: '周一至周五: 8:30 - 18:00',
     features: [
@@ -77,18 +77,58 @@ const facilities = [
       <div class="absolute inset-0 bg-linear-to-b from-slate-900/50 to-slate-900"></div>
     </div>
     
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-      <div class="inline-block px-4 py-2 mb-6 bg-blue-900/50 border border-blue-500/30 backdrop-blur-md text-blue-300 text-sm font-semibold rounded-full">
-        专业 · 专注 · 创新
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-4xl">
+        <div class="inline-block px-4 py-2 mb-6 bg-blue-900/50 border border-blue-500/30 backdrop-blur-md text-blue-300 text-sm font-semibold rounded-full">
+          专业 · 专注 · 创新
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          关于 <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-teal-400">我们</span>
+        </h1>
+        <p class="text-xl text-slate-300 max-w-3xl leading-relaxed">
+          广西遥感空间信息科技有限公司是广西自然资源遥感院下属国有企业，深度整合卫星遥感、地理信息与时空大数据三大技术体系，构建了从数据采集处理到行业应用的全产业链服务体系。
+        </p>
       </div>
-      <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-        关于 <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-teal-400">我们</span>
-      </h1>
-      <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-        广西遥感空间信息科技有限公司是广西自然资源遥感院下属的高新技术企业，致力于为自然资源管理、生态文明建设和经济社会发展提供全方位的空间地理信息服务。
-      </p>
     </div>
   </section>
+
+  <!-- Qualifications Section -->
+  <Section class="bg-slate-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">企业资质与荣誉</h2>
+        <p class="text-lg text-slate-600 max-w-2xl">
+          先后获授权专利3项、软著25项，荣获包括行业奖项14项，社会奖项2项等共16项荣誉。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {[
+          "高新技术企业",
+          "科技型中小企业",
+          "数字广西建设成长型数字经济企业",
+          "广西自然资源遥感院科技创新平台",
+          "新型研发机构孵化企业",
+          "武汉大学测绘遥感重点实验室支持企业",
+          "南宁师范大学就业实习基地",
+          "测绘资质证书",
+          "ISO质量管理体系认证",
+          "职业健康安全管理体系认证",
+          "环境管理体系认证",
+          "CMA检验检测机构资质"
+        ].map((item) => (
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow text-center">
+            <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-slate-800">{item}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </Section>
 
   <!-- Facilities Grid -->
   <Section class="bg-white">

@@ -9,9 +9,9 @@ interface Stat {
 
 const stats: Stat[] = [
   { value: '23.76', label: '地形三维数据', suffix: '万km²' },
-  { value: '400', label: '系统授权用户', suffix: '+' },
+  { value: '28', label: '知识产权(专利/软著)', suffix: '+' },
+  { value: '16', label: '行业荣誉奖项', suffix: '项' },
   { value: '73', label: '矿山监测项目', suffix: '+' },
-  { value: '10', label: '行业应用领域', suffix: '+' },
 ];
 
 export default function AnimatedStats() {

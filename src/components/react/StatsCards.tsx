@@ -1,4 +1,4 @@
-import { CheckCircle2, TrendingDown, Users, Package } from 'lucide-react';
+import { CheckCircle2, TrendingDown, Users, Package, Map } from 'lucide-react';
 
 interface Stat {
   value: string;
@@ -15,12 +15,13 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   TrendingDown,
   Users,
   Package,
+  Map,
 };
 
-export default function StatsCards({ stats }: Props) {
+export default function StatsCards({ stats = [] }: Props) {
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-      {stats.map((stat, index) => {
+      {stats?.map((stat, index) => {
         const IconComponent = iconMap[stat.iconName];
         
         return (

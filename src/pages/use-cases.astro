@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Section from '../components/ui/Section.astro';
-import Button from '../components/ui/Button.astro';
 import UseCaseTabs from '../components/react/UseCaseTabs';
 import StatsCards from '../components/react/StatsCards';
 import { Image } from 'astro:assets';
@@ -14,86 +13,108 @@ import consumerGoodsImg from '@assets/photo-1558618666-fcd25c85cd64.jpg';
 import foodBeverageImg from '@assets/photo-1542838132-92c53300491e.jpg';
 
 import heroBgImg from '@assets/photo-1551288049-bebda4e38f71.jpg';
-import ctaBgImg from '@assets/photo-1553413077-190dd305871c.jpg';
 
 const useCases:any[] = [
   {
-    industry: '自然资源管理',
+    industry: '自然资源监管',
     iconName: 'Tree',
     image: ecommerceImg,
-    challenge: '面对广阔的自然资源，传统人工巡查效率低、周期长，难以实时掌握耕地变化、违法用地等情况。',
-    solution: '建立自然资源遥感大数据智能监测平台，利用AI技术自动提取变化图斑，实现“天上看、地上查、网上管”。',
+    challenge: '面对广西复杂地形地貌和气象条件下自然资源监管需求，传统人工调查手段难以满足快速、精准的监测要求。',
+    solution: '实施“广西自然资源卫星遥感智能监测关键技术与应用示范”项目，基于历年遥感影像构建自然资源基础要素与专题要素识别样本库，研发自然资源遥感综合监测平台。',
     results: [
-      '监测效率提升80%以上',
-      '违法用地发现率大幅提高',
-      '实现全区常态化监测',
-      '大幅降低人工巡查成本'
+      '项目获自治区批复立项',
+      '批复经费870万元',
+      '建立自然资源智能识别模型',
+      '提供精准技术支撑'
     ]
   },
   {
     industry: '国土空间规划',
     iconName: 'Map',
     image: healthcareImg,
-    challenge: '规划编制过程中数据来源多、标准不一，实施监督缺乏有效抓手，难以实现全生命周期管理。',
-    solution: '构建国土空间规划“一张图”实施监督信息系统，整合现状、规划、管理等各类数据，形成统一的空间底座。',
+    challenge: '规划业务需求和应用现状亟需提升治理能力，现有数据未充分挖掘可视化与智能化潜力。',
+    solution: '开展“国土空间规划实景三维智能可视化分析平台研发与应用”，依托23.76万平方公里地形级三维模型和384平方公里城市级三维模型，构建立体化决策分析体系。',
     results: [
-      '数据共享与协同效率提升',
-      '规划实施监督全流程覆盖',
-      '辅助科学决策能力增强',
-      '提升空间治理现代化水平'
+      '项目获自治区批复立项',
+      '批复经费400万元',
+      '打造地理信息数据底座',
+      '促进治理模式转型升级'
     ]
   },
   {
-    industry: '矿山生态修复',
+    industry: '生态屏障监测',
     iconName: 'Mountain',
     image: automotiveImg,
-    challenge: '露天矿山分布广、监管难度大，越界开采、生态破坏等问题频发，传统监管手段滞后。',
-    solution: '利用实景三维与遥感监测技术，对矿山进行定期“体检”，自动识别越界开采与生态修复情况。',
+    challenge: '南方生态屏障环境保护需求迫切，需对林业、漓江流域、北部湾流域等典型区域进行生态综合监测。',
+    solution: '承担高分专项“广西南方生态屏障遥感监测体系建设与应用”，利用高分影像、DEM等数据，基于人工智能构建生态要素遥感识别与变化监测智能体系。',
     results: [
-      '矿山监测覆盖率100%',
-      '违规行为及时发现',
-      '生态修复效果可视化评估',
-      '监管工作规范化、智能化'
+      '广西2022年唯一入选项目',
+      '批复经费2520万元',
+      '开展生态价值评估研究',
+      '构建智能监测体系'
     ]
   },
   {
-    industry: '应急管理与防灾',
+    industry: '露天矿山监测',
     iconName: 'AlertTriangle',
     image: technologyImg,
-    challenge: '自然灾害突发性强，灾害风险底数不清，应急救援缺乏精准的地理信息支持。',
-    solution: '开展自然灾害综合风险普查，建立森林火灾风险监测系统，提供灾前预警、灾中指挥、灾后评估服务。',
+    challenge: '露天矿山分布广、监管难度大，越界开采、以采代探等违法违规现象时有发生。',
+    solution: '作为广西露天矿山监测试点项目承建单位，承担73个矿山监测任务，利用实景三维测图系统实现“早发现、早分析”。',
     results: [
-      '风险隐患识别精准度高',
-      '火情监测响应时间缩短',
-      '应急指挥决策有据可依',
-      '保障人民生命财产安全'
+      '监测覆盖73个矿山',
+      '荣获20大测绘地理信息亮点工程',
+      '辅助核查处置问题',
+      '提升监管信息化水平'
     ]
   },
   {
-    industry: '农村确权登记',
+    industry: '农村房地一体',
     iconName: 'Home',
     image: consumerGoodsImg,
     challenge: '农村房地一体确权工作量大、权属关系复杂，传统测绘方式效率低，数据建库困难。',
-    solution: '研发农村房地一体确权登记管理系统，采用无人机倾斜摄影辅助调查，实现内外业一体化作业。',
+    solution: '研发“农村房地一体确权登记管理系统”，集数据建库、图表输出、质量检查于一体，大幅提高工作效率。',
     results: [
-      '确权登记效率大幅提升',
-      '权籍调查成本降低',
-      '数据成果质量可靠',
+      '应用于广西十余个市县',
+      '服务数十个作业单位',
+      '系统授权300余套',
       '有效化解历史遗留问题'
     ]
   },
   {
-    industry: '生态环境保护',
+    industry: '自然保护地监测',
     iconName: 'Leaf',
     image: foodBeverageImg,
     challenge: '自然保护地人类活动频繁，生态环境破坏隐蔽性强，监管部门难以全天候监控。',
-    solution: '基于高分辨率遥感影像，对自然保护地进行动态监测，及时发现违规建设、采矿等破坏生态行为。',
+    solution: '基于AI+遥感智能解译技术，快速获取保护地内人类活动轨迹，助力自然保护地保护监测走向现代化、智能化。',
     results: [
-      '实现保护地全覆盖监测',
+      '荣获2021年广西测绘学会亮点工程',
+      '荣获2022年广西测绘学会优秀工程铜奖',
       '人类活动轨迹精准捕捉',
-      '生态红线监管更严密',
       '守护绿水青山成效显著'
     ]
+  }
+];
+
+const stats = [
+  {
+    value: '80+',
+    label: '服务市县',
+    iconName: 'Map'
+  },
+  {
+    value: '400+',
+    label: '软件授权',
+    iconName: 'Package'
+  },
+  {
+    value: '1000+',
+    label: '专业用户',
+    iconName: 'Users'
+  },
+  {
+    value: '20+',
+    label: '荣誉奖项',
+    iconName: 'CheckCircle2'
   }
 ];
 ---
@@ -115,105 +136,35 @@ const useCases:any[] = [
       <div class="absolute inset-0 bg-linear-to-b from-slate-900/50 to-slate-900"></div>
     </div>
     
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-      <div class="inline-block px-4 py-2 mb-6 bg-teal-900/50 border border-teal-500/30 backdrop-blur-md text-teal-300 text-sm font-semibold rounded-full">
-        行业赋能 · 价值创造
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-4xl">
+        <div class="inline-block px-4 py-2 mb-6 bg-blue-900/50 border border-blue-500/30 backdrop-blur-md text-blue-300 text-sm font-semibold rounded-full">
+          应用案例
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          真实世界的 <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-teal-400">成功实践</span>
+        </h1>
+        <p class="text-xl text-slate-300 max-w-3xl leading-relaxed">
+          我们为各行各业提供精准、高效的空间信息解决方案，解决实际业务挑战，创造可衡量的价值。
+        </p>
       </div>
-      <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-        多行业 <span class="text-transparent bg-clip-text bg-linear-to-r from-teal-400 to-blue-400">应用案例</span>
-      </h1>
-      <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-        深入行业痛点，提供定制化解决方案，助力各行各业实现数字化、智慧化转型。
-      </p>
     </div>
   </section>
 
-  <!-- Interactive Use Cases -->
-  <Section class="bg-white">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold text-slate-900 mb-6">
-        成功案例展示
-      </h2>
-      <p class="text-xl text-slate-600 max-w-3xl mx-auto">
-        从自然资源管理到智慧城市建设，我们的技术正在各个领域发挥重要作用。
+  <!-- Use Case Tabs -->
+  <Section>
+    <div class="mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">重点项目展示</h2>
+      <p class="text-lg text-slate-600 max-w-3xl">
+        以下是我们承担的部分重点研发与应用项目，展示了我们在不同领域的技术实力与服务能力。
       </p>
     </div>
-    
-    <UseCaseTabs client:load useCases={useCases} />
+    <UseCaseTabs useCases={useCases} client:load />
   </Section>
 
-  <!-- Impact Stats -->
-  <Section class="bg-slate-50">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="text-4xl font-bold text-slate-900 mb-6">
-          数据见证 <span class="text-blue-600">服务价值</span>
-        </h2>
-        <p class="text-lg text-slate-600 mb-8 leading-relaxed">
-          我们不仅提供技术，更致力于为客户创造可衡量的价值。通过我们的服务，客户在效率提升、成本降低、风险防控等方面取得了显著成效。
-        </p>
-        <div class="space-y-4">
-          <div class="flex items-center">
-            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-              </svg>
-            </div>
-            <div>
-              <h4 class="font-bold text-slate-900">显著的效率提升</h4>
-              <p class="text-sm text-slate-600">自动化技术替代传统人工作业</p>
-            </div>
-          </div>
-          <div class="flex items-center">
-            <div class="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center mr-4">
-              <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <div>
-              <h4 class="font-bold text-slate-900">精准的决策支持</h4>
-              <p class="text-sm text-slate-600">数据驱动的科学管理与决策</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <StatsCards 
-        client:visible 
-        stats={[
-          { value: '80%', label: '效率提升', iconName: 'TrendingDown' },
-          { value: '100%', label: '监测覆盖率', iconName: 'CheckCircle2' },
-          { value: '400+', label: '服务用户', iconName: 'Users' },
-          { value: '10+', label: '应用行业', iconName: 'Package' }
-        ]} 
-      />
-    </div>
+  <!-- Stats Cards -->
+  <Section background="gray">
+    <StatsCards stats={stats} client:load />
   </Section>
 
-  <!-- Testimonials - Removed -->
-  
-  <!-- CTA -->
-  <Section class="bg-blue-900 text-white relative overflow-hidden">
-    <div class="absolute inset-0">
-      <Image 
-        src={ctaBgImg}
-        alt="CTA background"
-        class="w-full h-full object-cover opacity-20"
-        width={2070}
-        height={1380}
-      />
-    </div>
-    <div class="relative z-10 text-center max-w-4xl mx-auto">
-      <h2 class="text-4xl font-bold mb-6">
-        拥有类似的项目需求？
-      </h2>
-      <p class="text-xl text-blue-100 mb-10">
-        联系我们的专家团队，获取定制化的解决方案建议。
-      </p>
-      <!--
-      <Button href="/rfq" size="lg" class="bg-white! text-blue-900! hover:bg-blue-50!">
-        立即咨询
-      </Button>
-      -->
-    </div>
-  </Section>
 </BaseLayout>

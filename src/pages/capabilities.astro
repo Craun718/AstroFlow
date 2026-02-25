@@ -1,9 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Section from '../components/ui/Section.astro';
-import Card from '../components/ui/Card.astro';
 import Button from '../components/ui/Button.astro';
-import CapabilityAccordion from '../components/react/CapabilityAccordion';
 import { Image } from 'astro:assets';
 import ImageReveal from '../components/react/ImageReveal';
 
@@ -18,8 +15,8 @@ import ctaBgImg from '@assets/photo-1553413077-190dd305871c.jpg';
 
 const capabilities = [
   {
-    title: '遥感影像数据处理',
-    description: '拥有自主研发的遥感影像数据生产平台，提供从原始影像到标准数据产品的高效处理服务。',
+    title: '遥感影像数据生产平台',
+    description: '自主研发的遥感影像数据生产平台，提供从原始影像到标准数据产品的高效处理服务，提升影像出图效率。',
     icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
@@ -34,8 +31,8 @@ const capabilities = [
     ]
   },
   {
-    title: '实景三维建设',
-    description: '基于倾斜摄影与激光点云技术，构建高精度地形级与城市级三维模型，打造数字孪生底座。',
+    title: '实景三维测图与可视化',
+    description: '拥有实景三维测图系统与可视化管理平台，支持高精度采集、多样化编辑与各异构数据快速加载展示。',
     icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
     </svg>`,
@@ -49,8 +46,8 @@ const capabilities = [
     ]
   },
   {
-    title: 'AI智能监测',
-    description: '融合深度学习算法，实现对土地利用变化、违规建筑、生态破坏等目标的自动识别与监测。',
+    title: '自然资源遥感智能监测',
+    description: '构建广西特色的自然资源基础要素与专题要素识别样本库，研发自然资源遥感综合监测平台。',
     icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
     </svg>`,
@@ -64,8 +61,8 @@ const capabilities = [
     ]
   },
   {
-    title: '自然资源确权',
-    description: '提供房地一体、自然资源统一确权登记等全流程技术服务，保障自然资源资产权益。',
+    title: '自然资源统一确权登记',
+    description: '提供自然资源统一确权登记生产管理系统与农村房地一体确权登记管理系统，实现标准化作业与规范化管理。',
     icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
     </svg>`,
@@ -79,8 +76,8 @@ const capabilities = [
     ]
   },
   {
-    title: '国土空间规划',
-    description: '构建国土空间规划“一张图”实施监督信息系统，辅助科学决策与精细化管理。',
+    title: '国土空间规划“一张图”',
+    description: '构建国土空间规划“一张图”实施监督信息系统，整合现状、规划、管理数据，辅助科学决策。',
     icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
     </svg>`,
@@ -94,8 +91,8 @@ const capabilities = [
     ]
   },
   {
-    title: '智慧应用开发',
-    description: '面向多行业需求，开发基于GIS与大数据的智慧化应用系统，提升管理服务效能。',
+    title: '数据中台与无人系统',
+    description: '构建以基础数据底座、AI大脑为核心的数据中台，并研发智能无人控制系统，实现多场景智能化应用。',
     icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
     </svg>`,
@@ -115,12 +112,11 @@ const capabilities = [
   title="核心能力 | 广西遥感空间信息科技有限公司"
   description="广西遥感空间信息科技有限公司拥有领先的遥感影像处理、实景三维建设、AI智能监测及智慧应用开发能力。"
 >
-  <!-- Hero Section -->
-  <section class="relative py-24 bg-slate-900 overflow-hidden">
+<section class="relative py-24 bg-slate-900 overflow-hidden">
     <div class="absolute inset-0">
       <Image 
         src={heroBgImg}
-        alt="Advanced technology background"
+        alt="Technician working with advanced equipment"
         class="w-full h-full object-cover opacity-30"
         width={2070}
         height={1380}
@@ -128,21 +124,23 @@ const capabilities = [
       <div class="absolute inset-0 bg-linear-to-b from-slate-900/50 to-slate-900"></div>
     </div>
     
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-      <div class="inline-block px-4 py-2 mb-6 bg-blue-900/50 border border-blue-500/30 backdrop-blur-md text-blue-300 text-sm font-semibold rounded-full">
-        技术驱动 · 创新引领
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-4xl">
+        <div class="inline-block px-4 py-2 mb-6 bg-blue-900/50 border border-blue-500/30 backdrop-blur-md text-blue-300 text-sm font-semibold rounded-full">
+          核心能力
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          驱动行业变革的 <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-teal-400">技术实力</span>
+        </h1>
+        <p class="text-xl text-slate-300 max-w-3xl leading-relaxed">
+          依托多年行业积累与技术创新，为您提供从数据采集、处理、分析到应用的全链条解决方案。
+        </p>
       </div>
-      <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-        全方位空间信息 <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-teal-400">核心能力</span>
-      </h1>
-      <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-        依托多年行业积累与技术创新，为您提供从数据采集、处理、分析到应用的全链条解决方案。
-      </p>
     </div>
   </section>
 
   <!-- Capabilities Grid -->
-  <section class="py-24 bg-white">
+  <section class="py-10 bg-white">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {capabilities.map((cap, index) => (
@@ -152,65 +150,25 @@ const capabilities = [
                 <Image 
                   src={cap.image}
                   alt={cap.title}
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   width={800}
-                  height={600}
+                  height={500}
                 />
-                <div class="absolute inset-0 bg-linear-to-t from-slate-900/60 to-transparent"></div>
-                <div class="absolute bottom-4 left-4 text-white" set:html={cap.icon} />
+                <div class="absolute inset-0 bg-linear-to-t from-black/50 to-transparent"></div>
               </div>
-              <div class="p-8 flex-1 flex flex-col">
-                <h3 class="text-2xl font-bold text-slate-900 mb-4">{cap.title}</h3>
-                <p class="text-slate-600 mb-6 flex-1">
-                  {cap.description}
-                </p>
-                <ul class="space-y-3">
-                  {cap.features.map((feature) => (
-                    <li class="flex items-center text-sm text-slate-600">
-                      <svg class="w-4 h-4 text-teal-500 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+              <div class="p-6 flex-grow flex flex-col">
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center -mt-14 mb-4 shadow-lg border border-slate-200 z-10">
+                  <div class="text-blue-600" set:html={cap.icon} />
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">{cap.title}</h3>
+                <p class="text-slate-600 leading-relaxed mb-4 flex-grow">{cap.description}</p>
+                <Button href={`#${cap.title.replace(/\s+/g, '-').toLowerCase()}`} variant="outline" size="sm" class="mt-auto">
+                  了解更多
+                </Button>
               </div>
             </div>
           </ImageReveal>
         ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="relative py-24 overflow-hidden">
-    <div class="absolute inset-0">
-      <Image 
-        src={ctaBgImg}
-        alt="Technology background"
-        class="w-full h-full object-cover"
-        width={2070}
-        height={1380}
-      />
-      <div class="absolute inset-0 bg-linear-to-r from-blue-900/95 to-teal-900/95"></div>
-    </div>
-
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-      <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">
-        准备好开启智慧空间之旅了吗？
-      </h2>
-      <p class="text-xl text-slate-200 mb-12 max-w-2xl mx-auto">
-        联系我们，了解如何利用我们的核心能力为您创造价值。
-      </p>
-      <div class="flex flex-col sm:flex-row gap-6 justify-center">
-        <!-- 
-        <Button href="/rfq" size="lg" class="bg-white! text-blue-900! hover:bg-slate-100!">
-          联系我们
-        </Button>
-        -->
-        <Button href="/use-cases" size="lg" variant="outline" class="text-white! border-white! hover:bg-white/10!">
-          查看应用案例
-        </Button>
       </div>
     </div>
   </section>
