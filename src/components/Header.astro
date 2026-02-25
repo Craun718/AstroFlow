@@ -1,7 +1,8 @@
 ---
 import MobileMenu from "@components/react/MobileMenu";
 import { NAVIGATION } from "@config/site";
-import { Package } from "lucide-react";
+import { Image } from "astro:assets";
+import logoImg from "@assets/logo.png";
 
 const { currentPathname } = Astro.props;
 const isActiveLink = (href: string): boolean => {
@@ -14,10 +15,10 @@ const isActiveLink = (href: string): boolean => {
     <!-- Logo -->
     <div class="flex items-center">
       <a href="/" class="flex items-center space-x-3 group">
-        <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-linear-to-br from-blue-600 to-teal-600 group-hover:scale-110 transition-transform">
-          <Package className="w-6 h-6 text-white" />
+        <div class="flex items-center justify-center w-10 h-10 rounded-lg overflow-hidden group-hover:scale-110 transition-transform">
+          <Image src={logoImg} alt="Logo" class="w-full h-full object-contain" />
         </div>
-        <span class="text-xl md:text-2xl font-bold bg-linear-to-r from-blue-800 to-teal-600 bg-clip-text text-transparent truncate max-w-[200px] md:max-w-none">
+        <span class="text-xl md:text-2xl font-bold text-blue-900 truncate max-w-[200px] md:max-w-none">
           广西遥感空间信息科技有限公司
         </span>
       </a>
@@ -36,18 +37,6 @@ const isActiveLink = (href: string): boolean => {
         </a>
       );
       })}
-    </div>
-
-    <!-- CTA Button -->
-    <div class="hidden lg:flex lg:items-center lg:space-x-4">
-      <!-- 
-      <a
-        href="/rfq"
-        class="inline-flex items-center px-6 py-2.5 text-sm font-semibold text-white bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-lg shadow-md hover:shadow-lg transition-all"
-      >
-        联系我们
-      </a>
-      -->
     </div>
 
     <!-- Mobile Menu Button -->

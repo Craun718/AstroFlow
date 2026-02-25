@@ -16,7 +16,6 @@ export const NAVIGATION = [
 ] as const;
 
 export const SOCIAL_LINKS = {
-  linkedin: "https://linkedin.com/company/yourcompany",
-  twitter: "https://twitter.com/yourcompany",
-  facebook: "https://facebook.com/yourcompany",
+  email: "mailto:gxygxxkj@163.com",
+  gxrc: "https://www.gxrc.com/Company/db822a29-4822-4643-bca0-7aff2faed11e",
 } as const;
