@@ -1,6 +1,6 @@
-# AstroFlow - 物流与制造企业网站模板
+# GXRS website
 
-一个现代化的、专业的 Astro.js 模板，专为物流、制造和供应链公司设计。基于 React、Tailwind CSS 和 TypeScript 构建。
+GXRS的官方网站，展示了我们的产品和服务。
 
 ![Astro](https://img.shields.io/badge/Astro-5.16.0-FF5D01?logo=astro&logoColor=white)
 ![React](https://img.shields.io/badge/React-19.2.0-61DAFB?logo=react&logoColor=black)
@@ -167,7 +167,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 - 在组件文件中更新文本内容
 - 在 `src/config/site.ts` 中修改导航
 - 在 `src/pages/facilities.astro` 中更新设施信息
-- 在 `src/components/home/Testimonials.astro` 中自定义客户评价
+<!-- - 在 `src/components/home/Testimonials.astro` 中自定义客户评价 -->
 
 ## 🚢 部署
 
@@ -179,23 +179,6 @@ npm run build
 
 这将创建一个包含您静态网站的 `dist/` 文件夹。
 
-### 部署到 Vercel
-
-[![使用 Vercel 部署](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/astroflow)
-
-### 部署到 Netlify
-
-[![部署到 Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/yourusername/astroflow)
-
-### 其他平台
-
-`dist/` 文件夹可以部署到任何静态托管服务：
-
-- GitHub Pages
-- Cloudflare Pages
-- AWS S3 + CloudFront
-- 任何静态托管提供商
-
 ## 📄 许可证
 
 本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件。
@@ -203,10 +186,6 @@ npm run build
 ## 🤝 贡献
 
 欢迎贡献、问题报告和功能请求！请随时查看 [问题页面](https://github.com/yourusername/astroflow/issues)。
-
-## ⭐ 支持我们
-
-如果您觉得这个模板有用，请在 GitHub 上给它一个星标！
 
 ## 📧 支持
 
